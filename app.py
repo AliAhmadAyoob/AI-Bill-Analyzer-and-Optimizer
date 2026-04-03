@@ -23,7 +23,9 @@ os.makedirs('uploads', exist_ok=True)
 def err(msg, code=400):
     return jsonify({'success': False, 'error': msg}), code
 
-
+@app.route('/')
+def index():
+    return render_template('index.html')
 # ─────────────────────────────────────────────────────────────────
 # POST /api/upload-bill
 # ─────────────────────────────────────────────────────────────────
