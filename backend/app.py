@@ -15,7 +15,12 @@ from ml_predictor     import predict_from_appliances
 from anomaly_detector import detect   as detect_anomaly
 from user_classifier  import classify as classify_user
 
-app = Flask(__name__,template_folder='.',static_folder='.')
+app = Flask(
+    __name__,
+    template_folder='../frontend/templates',  
+    static_folder='../frontend/static'     
+)
+
 CORS(app)
 os.makedirs('uploads', exist_ok=True)
 
