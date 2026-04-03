@@ -5,7 +5,7 @@
 #   user_classifier  -> household profile              (KMeans clustering)
 
 import os, uuid
-from flask      import Flask, request, jsonify
+from flask      import Flask, request, jsonify ,render_template
 from flask_cors import CORS
 
 from bill_reader      import extract_bill_data
