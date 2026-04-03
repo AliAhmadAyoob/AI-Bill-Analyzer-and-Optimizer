@@ -5,7 +5,7 @@
 #   user_classifier  -> household profile              (KMeans clustering)
 
 import os, uuid
-from flask      import Flask, request, jsonify
+from flask      import Flask, request, jsonify ,render_template
 from flask_cors import CORS
 
 from bill_reader      import extract_bill_data
@@ -28,7 +28,9 @@ os.makedirs('uploads', exist_ok=True)
 def err(msg, code=400):
     return jsonify({'success': False, 'error': msg}), code
 
-
+@app.route('/')
+def index():
+    return render_template('index.html')
 # ─────────────────────────────────────────────────────────────────
 # POST /api/upload-bill
 # ─────────────────────────────────────────────────────────────────
