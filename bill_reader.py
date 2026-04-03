@@ -143,7 +143,7 @@ def extract_bill_data(file_path: str) -> dict:
         'Image processing is not available on this device. '
         'Please enter your units and amount manually below.'
     )
-    return result
+        return result
     except ValueError as e:
         # Known, user-friendly errors (e.g. HEIC format)
         result['error'] = str(e)
