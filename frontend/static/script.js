@@ -1,7 +1,7 @@
 // app.js — Smart Energy Optimizer  v2
 // Fixes: state management, empty recommendations, live simulator
 
-const API = 'https://ai-bill-analyzer-and-optimizer.onrender.com/api';
+const API = 'https://ai-bill-analyzer-and-optimizer.onrender.com';
 
 // ── Global state ───────────────────────────────────────────────────────────
 const S = {
